@@ -34,9 +34,11 @@ export default function Biblia() {
                 if (modulosKJV[ruta]) {
                     try {
                         const json = await modulosKJV[ruta]();
-                        // Buscamos el capítulo. capituloIndex empieza en 0, 
-                        // por lo que el capítulo 1 es (0+1) = '1'
-                        const capObj = json.chapters?.find(c => c.chapter === (capituloIndex + 1).toString());
+                        
+                        // CORRECCIÓN: Buscamos el capítulo comparando como números
+                        const capNum = capituloIndex + 1;
+                        const capObj = json.chapters?.find(c => parseInt(c.chapter) === capNum);
+                        
                         // Transformamos array de objetos {verse, text} a array de strings
                         datos = capObj ? capObj.verses.map(v => v.text) : [];
                     } catch (error) {
@@ -46,7 +48,7 @@ export default function Biblia() {
             }
             
             // LOGS DE DEPURACIÓN
-            console.log("Intentando cargar:", version, libro, "Capítulo índice:", capituloIndex);
+            console.log("Intentando cargar:", version, libro, "Capítulo:", capituloIndex + 1);
             console.log("Datos obtenidos:", datos);
             
             setVersiculos(datos);
