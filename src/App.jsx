@@ -17,7 +17,6 @@ function Home() {
   );
 }
 
-function Biblia() { return <div className="text-white">Vista Biblia</div>; }
 function Notas() { return <div className="text-white">Vista Notas</div>; }
 function Perfil() { return <div className="text-white">Vista Perfil</div>; }
 
