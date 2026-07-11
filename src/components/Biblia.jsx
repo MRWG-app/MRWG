@@ -44,6 +44,11 @@ export default function Biblia() {
                     }
                 }
             }
+            
+            // LOGS DE DEPURACIÓN
+            console.log("Intentando cargar:", version, libro, "Capítulo índice:", capituloIndex);
+            console.log("Datos obtenidos:", datos);
+            
             setVersiculos(datos);
         };
 
