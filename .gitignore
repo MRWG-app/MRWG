@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Graphify outputs and cache
+graphify-out/
+.graphify/
+GEMINI.md
