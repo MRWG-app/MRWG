@@ -1,6 +1,7 @@
 import { supabase } from './supabaseClient';
 import { useEffect } from 'react';
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import Biblia from './components/Biblia';
 
 /* Funciones de navegación*/
 function Home() {
