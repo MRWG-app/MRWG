@@ -4,18 +4,18 @@ Capítulo actual
 */
 
 import {useState } from 'react';
-import rv60Data from 'src/data/biblia/RV60.json';
+import rv60Data from '../data/biblia/RV60.json';
 
 export default function Biblia() {
     // Inicializa y actualiza estado del capítulo actual
-    const [capitulo, setCapitulo] = useState(1);
+    const [libro] = useState('Genesis');
 
     // Busca en el array del JSON el capítulo actual y lo devuelve
     const contenido = rv60Data.find(b => b.capitulo === capitulo);
 
     return (
         <div className="p-4 text-white">
-            <h2 className="text-2x1 mb-4">Biblia RV60 - Capitulo {capitulo}</h2>
+            <h2 className="text-2xl mb-4">Biblia RV60 - Capitulo {capitulo}</h2>
             <div className="space-y-2">
                 {contenido ? (
                     contenido.verses.map((versiculo, index) => (
