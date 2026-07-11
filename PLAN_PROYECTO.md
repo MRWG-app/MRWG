@@ -22,11 +22,11 @@ Crear una PWA (Progressive Web App) gratuita para el fortalecimiento de la relac
 
 ### Fase 2: El Cerebro (Backend)
 
-* [ ] Configuración de tablas en Supabase:
+* [X] Configuración de tablas en Supabase:
   * `profiles` (Usuarios y horarios).
   * `bibles` (RV60, KJV).
   * `notes` (Apuntes y devocionales).
-* [ ] Configuración de políticas de seguridad (RLS) en Supabase.
+* [X] Configuración de políticas de seguridad (RLS) en Supabase.
 
 ### Fase 3: Frontend Core (Lectura y Apuntes)
 
